@@ -1,0 +1,12 @@
+<ul>
+    <li *ngFor="let item of topFiveProducts; index as i">
+        <div class="product">
+            <div class="title mobile">{{item.title}}</div>
+
+            <div class="img-container">
+                <img [id]="'image-' + i" [src]="item.images[0]" [alt]="item.title" (load)="onImageLoad($event)" />
+            </div>
+            <div class="title desktop">{{item.title}}</div>
+        </div>
+    </li>
+</ul>
